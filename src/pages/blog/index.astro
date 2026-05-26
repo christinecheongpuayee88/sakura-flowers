@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Base title="Journal — Sakura Flowers" description="Seasonal floristry guides, behind-the-scenes stories, and floral inspiration from our studio.">
+  <Nav />
+  <main class="blog-main">
+    <div class="blog-header">
+      <span class="eyebrow">The Sakura Journal</span>
+      <h1>Stories from the Studio</h1>
+      <p>Seasonal guides, floral inspiration, and behind-the-scenes from our flower studio.</p>
+    </div>
+
+    {posts.length === 0 ? (
+      <p class="no-posts">No posts yet — check back soon. 🌸</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map(post => (
+          <li class="post-item">
+            <a href={`/blog/${post.slug}/`} class="post-link">
+              {post.data.image && (
+                <div class="post-thumb">
+                  <img src={post.data.image} alt={post.data.title} loading="lazy" />
+                </div>
+              )}
+              <div class="post-meta">
+                <time class="post-date">
+                  {new Date(post.data.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+                <h2 class="post-title">{post.data.title}</h2>
+                <p class="post-desc">{post.data.description}</p>
+                <span class="read-more">Read more →</span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .blog-main {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: var(--bg);
+    min-height: 100vh;
+  }
+  .blog-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    display: block;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .blog-header h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .blog-header p {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+  .no-posts {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 17px;
+    padding: 80px 0;
+  }
+  .post-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .post-item { border-bottom: 1px solid var(--border); }
+  .post-link {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    padding: 48px 0;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+  }
+  .post-link:hover { opacity: 0.8; }
+  .post-thumb {
+    width: 200px; height: 160px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .post-date {
+    display: block;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .post-title {
+    font-size: 24px; font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  .post-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .read-more {
+    font-size: 13px; font-weight: 500;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 600px) {
+    .post-link { grid-template-columns: 1fr; gap: 20px; }
+    .post-thumb { width: 100%; height: 200px; }
+  }
+</style>

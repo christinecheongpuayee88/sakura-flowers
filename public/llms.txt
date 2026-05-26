@@ -1,0 +1,20 @@
+# Sakura Flowers
+
+> A Japanese-inspired floral studio offering handcrafted arrangements for weddings, celebrations, and everyday beauty. Based in London.
+
+## Pages
+
+- /: Home — hero, curated collections, occasion types, studio story, newsletter, contact enquiry form
+- /blog: Journal — floristry guides, behind-the-scenes stories, seasonal inspiration
+- /blog/welcome-to-sakura: Our story and the philosophy behind the studio
+
+## About
+
+Sakura Flowers is a London-based floral studio founded in 2019, inspired by the Japanese art of ikebana. We create bespoke arrangements using seasonally sourced blooms for weddings, corporate events, birthdays, and quiet everyday moments.
+
+## Contact
+
+Email: hello@sakuraflowers.co.uk
+Phone: +44 20 7123 4567
+Studio: 12 Blossom Lane, London W1F 7QH
+Hours: Monday–Saturday, 9am–6pm

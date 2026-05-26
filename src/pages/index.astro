@@ -1,0 +1,604 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Sakura Flowers — Japanese-Inspired Floral Studio"
+  description="Handcrafted floral arrangements inspired by Japanese artistry. Seasonal blooms, curated for life's most meaningful moments."
+>
+  <Nav />
+
+  <!-- ═══════════════════════════════════════════ HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="petals-layer" aria-hidden="true" id="petalsLayer"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Est. 2019 · Tokyo-inspired</span>
+      <h1 class="hero-h1">Where Blooms<br><em>Tell Stories</em></h1>
+      <p class="hero-sub">Handcrafted arrangements for life's most meaningful moments — weddings, celebrations, and quiet everyday beauty.</p>
+      <div class="hero-actions">
+        <a href="#collections" class="btn-primary">Explore Collections</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ COLLECTIONS -->
+  <section class="collections" id="collections">
+    <div class="section-header reveal">
+      <span class="eyebrow">Curated Collections</span>
+      <h2>Every Season, <em>A New Story</em></h2>
+    </div>
+
+    <div class="coll-grid">
+      <article class="coll-card coll-featured reveal">
+        <div class="coll-img">
+          <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80"
+            alt="Spring Sakura collection"
+            loading="lazy"
+          />
+        </div>
+        <div class="coll-info">
+          <h3>Spring Sakura</h3>
+          <p>Cherry blossoms, peonies, and white ranunculus. The quintessential Japanese spring, captured in each arrangement.</p>
+          <a href="#contact" class="btn-link">Shop Collection →</a>
+        </div>
+      </article>
+
+      <article class="coll-card reveal">
+        <div class="coll-img">
+          <img
+            src="https://images.unsplash.com/photo-1559563362-c667ba5f5480?auto=format&fit=crop&w=700&q=80"
+            alt="Velvet Roses collection"
+            loading="lazy"
+          />
+        </div>
+        <div class="coll-info">
+          <h3>Velvet Roses</h3>
+          <p>Deep reds and burgundy — passion rendered in petals.</p>
+          <a href="#contact" class="btn-link">Shop Collection →</a>
+        </div>
+      </article>
+
+      <article class="coll-card reveal">
+        <div class="coll-img">
+          <img
+            src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=700&q=80"
+            alt="Wildflower Meadow collection"
+            loading="lazy"
+          />
+        </div>
+        <div class="coll-info">
+          <h3>Wildflower Meadow</h3>
+          <p>Loose, wild, effortlessly beautiful. Like a field in full bloom.</p>
+          <a href="#contact" class="btn-link">Shop Collection →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ VALUES STRIP -->
+  <div class="values-strip">
+    <div class="value-item reveal">
+      <span class="value-icon">✦</span>
+      <span>Same-day delivery available</span>
+    </div>
+    <div class="value-sep" aria-hidden="true"></div>
+    <div class="value-item reveal">
+      <span class="value-icon">✦</span>
+      <span>Seasonal, locally sourced blooms</span>
+    </div>
+    <div class="value-sep" aria-hidden="true"></div>
+    <div class="value-item reveal">
+      <span class="value-icon">✦</span>
+      <span>Custom arrangements for any occasion</span>
+    </div>
+    <div class="value-sep" aria-hidden="true"></div>
+    <div class="value-item reveal">
+      <span class="value-icon">✦</span>
+      <span>Sustainable &amp; eco-conscious sourcing</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ OCCASIONS -->
+  <section class="occasions" id="occasions">
+    <div class="section-header reveal">
+      <span class="eyebrow">For Every Moment</span>
+      <h2>Flowers for Every <em>Occasion</em></h2>
+    </div>
+
+    <div class="occ-grid">
+      <article class="occ-card reveal">
+        <span class="occ-icon">💍</span>
+        <h3>Weddings</h3>
+        <p>Full wedding floristry — bridal bouquets, centrepieces, ceremony arches.</p>
+        <a href="#contact" class="btn-link">Enquire →</a>
+      </article>
+      <article class="occ-card reveal">
+        <span class="occ-icon">🎂</span>
+        <h3>Birthdays</h3>
+        <p>Make their day unforgettable with a bespoke arrangement.</p>
+        <a href="#contact" class="btn-link">Enquire →</a>
+      </article>
+      <article class="occ-card reveal">
+        <span class="occ-icon">🏢</span>
+        <h3>Corporate</h3>
+        <p>Elevate your workspace or event with curated seasonal displays.</p>
+        <a href="#contact" class="btn-link">Enquire →</a>
+      </article>
+      <article class="occ-card reveal">
+        <span class="occ-icon">💐</span>
+        <h3>Just Because</h3>
+        <p>The best gift needs no reason — just a feeling worth sharing.</p>
+        <a href="#contact" class="btn-link">Enquire →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ ABOUT -->
+  <section class="about" id="about">
+    <div class="about-img reveal">
+      <img
+        src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=900&q=80"
+        alt="Our florist at work"
+        loading="lazy"
+      />
+    </div>
+    <div class="about-text">
+      <span class="eyebrow reveal">Our Story</span>
+      <h2 class="reveal">Rooted in Craft,<br><em>Guided by Nature</em></h2>
+      <p class="reveal">Founded in 2019, Sakura Flowers was born from a deep admiration of Japanese ikebana — the art of flower arrangement as a form of mindful expression. We believe flowers are not mere decoration; they are a language.</p>
+      <p class="reveal">Every arrangement we create is a considered composition — balancing colour, form, and negative space the way a painter considers a canvas.</p>
+      <a href="#contact" class="btn-primary reveal">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-inner reveal">
+      <span class="eyebrow" style="color:var(--accent)">Stay Connected</span>
+      <h2>The Sakura <em>Journal</em></h2>
+      <p>Seasonal floristry guides, behind-the-scenes stories, and early access to new collections.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          type="email"
+          name="email"
+          placeholder="your@email.com"
+          autocomplete="email"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+      <p class="newsletter-note" id="newsletterMsg" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-header reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Let's Create Something<br><em>Beautiful Together</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <span class="contact-label">Studio</span>
+          <span>12 Blossom Lane, London W1F 7QH</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">Hours</span>
+          <span>Mon–Sat · 9am – 6pm</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+442071234567">+44 20 7123 4567</a>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-label">Email</span>
+          <a href="mailto:hello@sakuraflowers.co.uk">hello@sakuraflowers.co.uk</a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
+          <input type="email" name="email" placeholder="Your email" required autocomplete="email" />
+        </div>
+        <input type="text" name="occasion" placeholder="Occasion (wedding, birthday, etc.)" />
+        <textarea name="message" rows="4" placeholder="Tell us about your vision…" required></textarea>
+        <button type="submit" class="btn-primary">Send Enquiry</button>
+        <p class="form-msg" id="contactMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  /* ───── HERO ───── */
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1490750967868-88df5691cc1e?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    transform: scale(1.07);
+    transition: transform 10s ease-out;
+    z-index: 0;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(28,16,20,0.72) 0%, rgba(28,16,20,0.35) 60%, transparent 100%);
+  }
+  .hero.hero--loaded .hero-bg { transform: scale(1); }
+
+  .petals-layer {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .petal {
+    position: absolute;
+    top: -30px;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50% 0 50% 0;
+    opacity: 0;
+    animation: petalFall linear infinite;
+  }
+  @keyframes petalFall {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 700px;
+    padding: 0 64px;
+    color: #fff;
+  }
+  .hero-eyebrow {
+    display: block;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    opacity: 0; transform: translateY(20px);
+    animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;
+  }
+  .hero-h1 {
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 600;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    opacity: 0; transform: translateY(20px);
+    animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s forwards;
+  }
+  .hero-h1 em { font-weight: 400; font-style: italic; color: var(--accent); }
+  .hero-sub {
+    font-size: 17px; font-weight: 300; line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    max-width: 480px;
+    margin-bottom: 40px;
+    opacity: 0; transform: translateY(20px);
+    animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    opacity: 0; transform: translateY(20px);
+    animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.9s forwards;
+  }
+  @keyframes heroFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-scroll-hint {
+    position: absolute; bottom: 48px; left: 64px;
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5);
+  }
+  .scroll-line {
+    width: 1px; height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%,100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(1.3); opacity: 1; }
+  }
+
+  /* ───── BUTTONS ───── */
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 32px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+  }
+  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 32px;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-outline:hover { border-color: #fff; transform: translateY(-2px); }
+  .btn-link {
+    font-size: 13px; font-weight: 500;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .btn-link:hover { color: var(--primary-dark); }
+
+  /* ───── SECTION SHARED ───── */
+  .eyebrow {
+    display: block;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+  }
+  .section-header h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+  }
+  .section-header h2 em { font-style: italic; font-weight: 400; color: var(--primary); }
+
+  /* ───── COLLECTIONS ───── */
+  .collections {
+    padding: 120px 48px;
+    background: var(--bg);
+  }
+  .coll-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px;
+  }
+  .coll-featured { grid-row: 1 / 3; }
+  .coll-card { display: flex; flex-direction: column; overflow: hidden; }
+  .coll-img { aspect-ratio: 1; overflow: hidden; }
+  .coll-featured .coll-img { aspect-ratio: 4/5; }
+  .coll-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  .coll-card:hover .coll-img img { transform: scale(1.06); }
+  .coll-info { padding: 28px 0 0; }
+  .coll-info h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+  .coll-info p { font-size: 15px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.65; }
+
+  /* ───── VALUES STRIP ───── */
+  .values-strip {
+    background: var(--green);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .value-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 40px;
+    font-size: 14px; font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+  .value-icon { color: var(--accent); font-size: 10px; }
+  .value-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.15); }
+
+  /* ───── OCCASIONS ───── */
+  .occasions {
+    padding: 120px 48px;
+    background: var(--accent-light);
+  }
+  .occ-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .occ-card {
+    padding: 40px 32px;
+    background: var(--surface);
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .occ-card:hover { background: var(--primary); transform: translateY(-4px); }
+  .occ-card:hover h3,
+  .occ-card:hover p,
+  .occ-card:hover .btn-link { color: #fff; }
+  .occ-icon { font-size: 32px; display: block; margin-bottom: 20px; }
+  .occ-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 12px; transition: color 0.3s; }
+  .occ-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; transition: color 0.3s; }
+
+  /* ───── ABOUT ───── */
+  .about {
+    padding: 120px 48px;
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about-img { overflow: hidden; }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
+  .about-text { display: flex; flex-direction: column; gap: 24px; }
+  .about-text h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 600; line-height: 1.15; }
+  .about-text h2 em { font-style: italic; font-weight: 400; color: var(--primary); }
+  .about-text p { font-size: 16px; color: var(--text-muted); line-height: 1.8; }
+
+  /* ───── NEWSLETTER ───── */
+  .newsletter {
+    background: var(--green);
+    padding: 120px 48px;
+    text-align: center;
+    color: #fff;
+  }
+  .newsletter-inner { max-width: 560px; margin: 0 auto; }
+  .newsletter h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px; }
+  .newsletter h2 em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .newsletter p { font-size: 16px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7; }
+  .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+  .newsletter-form input {
+    flex: 1; padding: 14px 20px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    color: #fff; border-radius: 100px;
+    font-family: 'Jost', sans-serif; font-size: 15px;
+    outline: none; transition: border-color 0.2s;
+  }
+  .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .newsletter-form input:focus { border-color: rgba(255,255,255,0.6); }
+  .newsletter-note { font-size: 14px; color: var(--accent); margin-top: 16px; min-height: 20px; }
+
+  /* ───── CONTACT ───── */
+  .contact-section {
+    padding: 120px 48px;
+    background: var(--bg);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 32px; }
+  .contact-detail { display: flex; flex-direction: column; gap: 4px; }
+  .contact-label {
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--primary);
+  }
+  .contact-detail span:last-child,
+  .contact-detail a { font-size: 16px; color: var(--text); text-decoration: none; }
+  .contact-detail a:hover { color: var(--primary); }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; padding: 14px 18px;
+    border: 1.5px solid var(--border);
+    background: var(--surface); color: var(--text);
+    border-radius: 8px;
+    font-family: 'Jost', sans-serif; font-size: 15px;
+    outline: none; transition: border-color 0.2s;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus { border-color: var(--primary); }
+  .contact-form textarea { resize: vertical; }
+  .form-msg { font-size: 14px; color: var(--primary); min-height: 20px; }
+
+  /* ───── REVEAL ───── */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ───── REDUCED MOTION ───── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+    }
+    .petals-layer { display: none; }
+    .hero-bg { transform: scale(1) !important; }
+    .reveal, .hero-eyebrow, .hero-h1, .hero-sub, .hero-actions {
+      opacity: 1 !important; transform: translateY(0) !important;
+    }
+  }
+
+  /* ───── RESPONSIVE ───── */
+  @media (max-width: 1024px) { .occ-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) {
+    .collections, .occasions, .newsletter { padding: 80px 24px; }
+    .contact-section { padding: 80px 24px; }
+    .about { padding: 80px 24px; grid-template-columns: 1fr; gap: 40px; max-width: 100%; }
+    .values-strip { padding: 32px 24px; flex-direction: column; gap: 16px; }
+    .value-sep { display: none; }
+    .coll-grid { grid-template-columns: 1fr; }
+    .coll-featured { grid-row: auto; }
+    .occ-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .form-row { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .hero-content { padding: 0 28px; }
+    .hero-scroll-hint { display: none; }
+  }
+  @media (max-width: 480px) { .occ-grid { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  // Ken Burns hero entrance
+  document.querySelector('.hero')?.classList.add('hero--loaded');
+
+  // Petal particles
+  const layer = document.getElementById('petalsLayer');
+  if (layer) {
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'petal';
+      p.style.cssText = `left:${Math.random()*100}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;animation-duration:${10+Math.random()*8}s;animation-delay:${-Math.random()*18}s;`;
+      layer.appendChild(p);
+    }
+  }
+
+  // Scroll reveals
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Newsletter form
+  document.getElementById('newsletterForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = document.getElementById('newsletterMsg');
+    if (msg) msg.textContent = "Thank you! You're on the list. 🌸";
+    (e.target as HTMLFormElement).reset();
+  });
+
+  // Contact form
+  document.getElementById('contactForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = document.getElementById('contactMsg');
+    if (msg) msg.textContent = "Thank you! We'll be in touch within 24 hours. 🌸";
+    (e.target as HTMLFormElement).reset();
+  });
+</script>
